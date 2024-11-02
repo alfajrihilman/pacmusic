@@ -28,7 +28,11 @@ jobs:
         run: |
           sleep 10
           curl http://localhost:5000
-          
+
+      - name: Uninstall Driver Manager to Wipeout
+        run: |
+          pip uninstall webdriver-manager
+            
       - name: Testing Requirements
         run: |
           pip install -r test/requirements.txt
