@@ -3,7 +3,7 @@ name: Dev Testing 🔎
 
 on:
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-testing:
@@ -28,7 +28,7 @@ jobs:
         run: |
           sleep 10
           curl http://localhost:5000
-          
+            
       - name: Testing Requirements
         run: |
           pip install -r test/requirements.txt
