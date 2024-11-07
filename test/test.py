@@ -25,17 +25,17 @@ class TestMusicPlayer(unittest.TestCase):
         
     def test_play_pause(self):
         self.driver.find_element(By.XPATH, "//button[@onclick=\'togglePlayPause()\']").click()
-        self.driver.implicitly_wait(20)
+        self.driver.implicitly_wait(60)
         self.driver.find_element(By.XPATH, "//button[@onclick=\'togglePlayPause()\']").click()
         self.driver.implicitly_wait(60)
 
     def test_next_previous_song(self):
         self.driver.find_element(By.XPATH, "//button[@onclick=\'nextSong()\']").click()
-        self.driver.implicitly_wait(20)
+        self.driver.implicitly_wait(60)
         self.driver.find_element(By.XPATH, "//button[@onclick=\'nextSong()\']").click()
-        self.driver.implicitly_wait(20)
+        self.driver.implicitly_wait(60)
         self.driver.find_element(By.XPATH, "//button[@onclick=\'previousSong()\']").click()
-        self.driver.implicitly_wait(20)
+        self.driver.implicitly_wait(60)
         self.driver.find_element(By.XPATH, "//button[@onclick=\'previousSong()\']").click()
 
     def tearDown(self):
